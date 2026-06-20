@@ -1,0 +1,21 @@
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title__number {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.section-title__divider {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.section-title__text {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
