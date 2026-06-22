@@ -1,9 +1,21 @@
 'use client'
 import "./css/Navbar.css"
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 40)
+        }
+
+        handleScroll()
+        window.addEventListener('scroll', handleScroll)
+
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
     const navItems = [
         { name: "Inicio", href: "#inicio" },
         { name: "Servicios", href: "#servicios" },
@@ -14,7 +26,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className="Navbar">
+        <nav className={`Navbar ${isScrolled ? 'Navbar--scrolled' : ''}`}>
             <div className="navbar-container">
                 <div className="navbar-Title">
                     Triana Beauty Studio ®
@@ -35,6 +47,7 @@ export default function Navbar() {
                             key={item.name}
                             href={item.href}
                             className="nav-link"
+                            onClick={() => setIsOpen(false)}
                         >
                             {item.name}
                         </a>
@@ -42,25 +55,25 @@ export default function Navbar() {
                 </div>
 
                 <button className="nav-button">
-                    Reservar
+                    <a href="#contacto">Reservar</a>
                 </button>
             </div>
 
             {isOpen && (
                 <div className="nav-links-mobile">
                     {navItems.map((item) => (
-                       
-                         <a
+                        <a
                             key={item.name}
                             href={item.href}
                             className="nav-link"
+                            onClick={() => setIsOpen(false)}
                         >
                             {item.name}
                         </a>
                     ))}
 
-                    <button className="nav-button-mobile">
-                        Reservar
+                    <button className="nav-button-mobile" >
+                        <a href="#contacto">Reservar</a>
                     </button>
                 </div>
             )}

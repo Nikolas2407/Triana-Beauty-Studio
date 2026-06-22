@@ -34,7 +34,7 @@ const images = [
 
 export default function About() {
   return (
-    <section className={styles.About}>
+    <section className={styles.About} id='nosotros'>
       <div className={styles['About__inner']}>
         <SectionTitle number="02" title="Sobre Nosotros" />
 

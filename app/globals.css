@@ -10,3 +10,12 @@ body {
   color: var(--foreground);
   font-family: var(--font-montserrat), sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+
+  scroll-margin-top: 110px;
+
+}
