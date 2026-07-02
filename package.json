@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@mui/x-date-pickers": "^9.7.0",
+    "dayjs": "^1.11.21",
     "motion": "^12.40.0",
     "next": "16.2.9",
     "react": "19.2.4",

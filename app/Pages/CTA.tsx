@@ -1,9 +1,12 @@
 'use client'
-
+import { useState } from 'react';
 import styles from './css/CTA.module.css'
 import { motion } from 'motion/react'
+import Reservar from '../Components/Reservar'
+
 
 export default function CTA() {
+    const [open, setOpen] = useState(false);
     return (
         <section className={styles.CTA} id="contacto">
             <motion.div
@@ -42,9 +45,11 @@ export default function CTA() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.97 }}
                     transition={{ duration: 0.35, delay: 0.34, ease: 'easeOut' }}
+                    onClick={() => setOpen(true)}
                 >
                     Reservar Ahora
                 </motion.a>
+                {open && <Reservar />}
             </motion.div>
         </section>
     )

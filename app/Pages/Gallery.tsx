@@ -6,36 +6,36 @@ import SectionTitle from '../Components/SectionTitle'
 
 const galleryItems = [
     {
-        image: '/images/gallery-1.jpg',
+        image: '/images/gallery-1.jpeg',
         text: 'Descubre\nalgunos',
     },
     {
-        image: '/images/gallery-2.jpg',
+        image: '/images/gallery-2.PNG',
         text: 'de nuestros\ntrabajos',
     },
     {
-        image: '/images/gallery-3.jpg',
+        image: '/images/gallery-3.PNG',
         text: 'y\nencuentra',
     },
     {
-        image: '/images/gallery-4.jpg',
+        image: '/images/gallery-4.PNG',
     },
     {
-        image: '/images/gallery-5.jpg',
+        image: '/images/gallery-5.PNG',
     },
     {
-        image: '/images/gallery-6.jpg',
+        image: '/images/gallery-6.jpeg',
     },
     {
-        image: '/images/gallery-7.jpg',
+        image: '/images/gellery-7.jpeg',
         text: 'inspiración\npara',
     },
     {
-        image: '/images/gallery-8.jpg',
+        image: '/images/gellery-8.PNG',
         text: 'y\nencuentra',
     },
     {
-        image: '/images/gallery-9.jpg',
+        image: '/images/gallery-9.PNG',
         text: 'tu\npróxima\ncita',
     },
 ]

@@ -46,14 +46,14 @@ export default function Why_Us() {
             transition={{ duration: 0.75, ease: 'easeOut' }}
           >
             <motion.img
-              src="/images/why-us-1.jpg"
+              src="/images/why-us-1.PNG"
               alt="Diseño de uñas verde"
               className={`${styles['WhyUs__image']} ${styles['WhyUs__image--one']}`}
               whileHover={{ scale: 1.025 }}
               transition={{ duration: 0.35, ease: 'easeOut' }}
             />
             <motion.img
-              src="/images/why-us-2.jpg"
+              src="/images/why-us-2.PNG"
               alt="Diseño de uñas elegante"
               className={`${styles['WhyUs__image']} ${styles['WhyUs__image--two']}`}
               initial={{ opacity: 0, x: 45, y: 35 }}

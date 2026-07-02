@@ -7,25 +7,25 @@ import logo from '../../public/Logo-1.svg'
 
 const images = [
   {
-    src: '/images/nails-1.jpg',
+    src: '/images/nails-1.PNG',
     className: styles['About__image--top-left'],
     initial: { opacity: 0, x: -40, y: 40 },
     delay: 0,
   },
   {
-    src: '/images/nails-2.jpg',
+    src: '/images/nails-2.PNG',
     className: styles['About__image--top-right'],
     initial: { opacity: 0, x: 40, y: -40 },
     delay: 0.12,
   },
   {
-    src: '/images/nails-3.jpg',
+    src: '/images/nails-3.PNG',
     className: styles['About__image--bottom-left'],
     initial: { opacity: 0, x: -40, y: 40 },
     delay: 0.24,
   },
   {
-    src: '/images/nails-4.jpg',
+    src: '/images/nails-4.PNG',
     className: styles['About__image--bottom-right'],
     initial: { opacity: 0, x: 40, y: 40 },
     delay: 0.36,

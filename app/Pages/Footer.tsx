@@ -1,5 +1,4 @@
 'use client'
-
 import styles from './css/Footer.module.css'
 import { motion } from 'motion/react'
 import { IoLogoWhatsapp, IoLogoInstagram, IoLogoFacebook, IoMailOutline } from 'react-icons/io5'
@@ -14,11 +13,13 @@ const links = [
 ]
 
 const socials = [
-    { label: 'WhatsApp', href: 'https://wa.me/', Icon: IoLogoWhatsapp },
-    { label: 'Instagram', href: 'https://instagram.com/', Icon: IoLogoInstagram },
-    { label: 'Facebook', href: 'https://facebook.com/', Icon: IoLogoFacebook },
-    { label: 'Correo', href: 'mailto:contacto@trianabeautystudio.com', Icon: IoMailOutline },
+    { label: 'WhatsApp', href: 'https://wa.me/+573123048235', Icon: IoLogoWhatsapp },
+    { label: 'Instagram', href: 'https://www.instagram.com/trianabeautystudio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', Icon: IoLogoInstagram },
+/*     { label: 'Facebook', href: 'https://facebook.com/', Icon: IoLogoFacebook },
+    { label: 'Correo', href: 'mailto:contacto@trianabeautystudio.com', Icon: IoMailOutline }, */
 ]
+
+
 
 export default function Footer() {
     return (

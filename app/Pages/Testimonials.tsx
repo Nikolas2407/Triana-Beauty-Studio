@@ -14,7 +14,7 @@ const testimonials = [
     text: '“Excelente atención y diseños hermosos. Definitivamente volveré.”',
   },
   {
-    image: '/images/testimonials-3.jpg',
+    image: '/images/Testimonials-3.jpg',
     text: '“El mejor lugar para consentirme y lucir unas uñas increíbles.”',
   },
 ]
