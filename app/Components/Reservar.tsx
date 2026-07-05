@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { motion } from 'motion/react'
 import styles from './css/Reservar.module.css'
 
-export default function Reservar() {
-    const [open, setOpen] = useState(false);
+export default function Reservar({  onClose }: { onClose: () => void  }) {
     const [fecha, setFecha] = useState("");
     const [hora, setHora] = useState("");
     
@@ -15,15 +14,15 @@ export default function Reservar() {
     }
 
     const mensaje = `¡Hola Laura! Me gustaría reservar una cita para el ${fecha} a las ${hora}.`;
-    const numero = "+573123048235";
+    const numero = "573123048235";
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
-    setOpen(false);
+     onClose(); 
+
 } 
 return(
     <>
- 
-    {open && (
+
   <div className={styles.modalElemento}>
     <div className={styles.modalContenido}>
       <h2>📅 Reserva tu cita</h2>
@@ -47,11 +46,9 @@ return(
       </div>
 
       <div className={styles.acciones}>
-        <button
-          onClick={() => setOpen(false)}
-        >
-          Cancelar
-        </button>
+      <button onClick={onClose}>
+        Cancelar
+      </button>
 
         <button onClick={reservar}>
           Confirmar
@@ -59,7 +56,7 @@ return(
       </div>
     </div>
   </div>
-)}
+
    </>
 )
 }

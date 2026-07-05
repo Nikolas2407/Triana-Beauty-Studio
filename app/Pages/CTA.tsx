@@ -36,8 +36,8 @@ export default function CTA() {
                     Agenda tu cita y déjanos transformar tus ideas en un diseño único.
                 </motion.p>
 
-                <motion.a
-                    href="#contact"
+                <motion.button
+                    
                     className={styles['CTA__button']}
                     initial={{ opacity: 0, y: 18 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -48,8 +48,12 @@ export default function CTA() {
                     onClick={() => setOpen(true)}
                 >
                     Reservar Ahora
-                </motion.a>
-                {open && <Reservar />}
+                </motion.button>
+                {open && (
+                    <Reservar
+                        onClose={() => setOpen(false)}
+                    />
+                )}
             </motion.div>
         </section>
     )

@@ -2,6 +2,8 @@
 import styles from './css/Footer.module.css'
 import { motion } from 'motion/react'
 import { IoLogoWhatsapp, IoLogoInstagram, IoLogoFacebook, IoMailOutline } from 'react-icons/io5'
+import { useState } from 'react'
+import Reservar from '../Components/Reservar'
 
 const links = [
     { label: 'Inicio', href: '#home' },
@@ -22,6 +24,7 @@ const socials = [
 
 
 export default function Footer() {
+    const [open, setOpen] = useState(false);
     return (
         <footer className={styles.Footer}>
             <div className={styles['Footer__inner']}>
@@ -39,9 +42,24 @@ export default function Footer() {
                         </a>
                     ))}
 
-                    <a href="#contact" className={styles['Footer__button']}>
-                        Reservar Ahora
-                    </a>
+                <motion.button
+                    
+                    className={styles['CTA__button']}
+                    initial={{ opacity: 0, y: 18 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.97 }}
+                    transition={{ duration: 0.35, delay: 0.34, ease: 'easeOut' }}
+                    onClick={() => setOpen(true)}
+                >
+                    Reservar Ahora
+                </motion.button>
+                {open && (
+                    <Reservar
+                        onClose={() => setOpen(false)}
+                    />
+                )}
                 </motion.nav>
 
                 <motion.div
