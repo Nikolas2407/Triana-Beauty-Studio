@@ -6,11 +6,11 @@ import { motion } from 'motion/react'
 
 const testimonials = [
   {
-    image: '/images/testimonials-1.jpg',
+    image: '/images/Testimonials-1.jpg',
     text: '“Me encantó el resultado. Mis uñas quedaron exactamente como las imaginaba.”',
   },
   {
-    image: '/images/testimonials-2.jpg',
+    image: '/images/Testimonials-2.jpg',
     text: '“Excelente atención y diseños hermosos. Definitivamente volveré.”',
   },
   {
